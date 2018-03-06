@@ -109,8 +109,8 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void logPayment(String productName, String productId, int quantity, double price, String currency, String transactionId, Map<String, String> parameters) {
-    FlurryAgent.logPayment(productName, productId, quantity, price, currency, transactionId, parameters);
+  public void logPayment(String productName, String productId, int quantity, double price, String currency, String transactionId) {
+    FlurryAgent.logPayment(productName, productId, quantity, price, currency, transactionId, new HashMap());
   }
 
   private static Map<String, String> toMap(@Nullable ReadableMap readableMap) {

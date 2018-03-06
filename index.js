@@ -138,6 +138,10 @@ export default class FlurryAnalytics {
     RNFlurryAnalytics.setUserGender(gender);
   }
 
+  static logPayment(productName, productId, quantity, price, currency, transactionId) {
+    RNFlurryAnalytics.logPayment(productName, productId, quantity, price, currency, transactionId);
+  }
+
   static mock() {
     const methods = Object.getOwnPropertyNames(FlurryAnalytics);
 
