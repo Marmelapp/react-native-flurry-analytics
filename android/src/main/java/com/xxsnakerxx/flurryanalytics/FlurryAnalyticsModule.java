@@ -108,6 +108,11 @@ public class FlurryAnalyticsModule extends ReactContextBaseJavaModule {
     FlurryAgent.setGender(_gender);
   }
 
+  @ReactMethod
+  public void logPayment(String productName, String productId, int quantity, double price, String currency, String transactionId, Map<String, String> parameters) {
+    FlurryAgent.logPayment(productName, productId, quantity, price, currency, transactionId, parameters);
+  }
+
   private static Map<String, String> toMap(@Nullable ReadableMap readableMap) {
     if (readableMap == null) {
       return null;
