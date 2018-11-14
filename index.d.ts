@@ -47,9 +47,10 @@ declare module 'react-native-flurry-analytics' {
 		setUserId(userId: string);
 		
 		/**
-		 * e.g FlurryAnalytics.logPayment("premium", "???", 1 (why tho), 4.99, "eur", "orderid"); 
+		 * Android only !
+		 * e.g FlurryAnalytics.logPayment("premium", "app_premium_sub", 1 (why tho), 4.99, "eur", "someTransactionId"); 
 		 */
-		logPayment(analyticsId: string, analyticsId: string, 1, price: number, currency: string, orderId: string);
+		logPayment(productName: string, productId: string, quantity: number, price: number, currency: string, transactionId: string)
 		
 		/**
 		 * e.g. FlurryAnalytics.setUserAge(28);
